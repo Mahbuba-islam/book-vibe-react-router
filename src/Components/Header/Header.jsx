@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,9 +47,9 @@ const Header = () => {
 
         {/* Center: Nav Links (desktop only) */}
         <nav className="hidden lg:flex gap-6 text-sm font-medium">
-          <a href="#" className="hover:text-primary">Home</a>
-          <a href="#" className="hover:text-primary">Listed Books</a>
-          <a href="#" className="hover:text-primary">Pages to Read</a>
+         <NavLink to='/' className="hover:text-primary">Home</NavLink>
+          <NavLink to='' className="hover:text-primary">Listed Books</NavLink>
+          <NavLink to='/' className="hover:text-primary">Pages to Read</NavLink>
         </nav>
 
         {/* Right: Buttons */}
@@ -64,10 +65,11 @@ const Header = () => {
 
       {/* Mobile: Dropdown Menu */}
       {isOpen && (
-        <ul className="lg:hidden menu menu-sm px-4 py-2 space-y-2 text-sm font-medium bg-base-100">
-          <li><a href="#" className="hover:text-primary">Home</a></li>
-          <li><a href="#" className="hover:text-primary">Listed Books</a></li>
-          <li><a href="#" className="hover:text-primary">Pages to Read</a></li>
+        <ul className="lg:hidden menu menu-sm px-4 py-2 space-y-2 text-sm font-medium bg-base-100 flex flex-col">
+           <NavLink to='/' className="hover:text-primary">Home</NavLink>
+          <NavLink to='' className="hover:text-primary">Listed Books</NavLink>
+          <NavLink to='/' className="hover:text-primary">Pages to Read</NavLink>
+        
         </ul>
       )}
     </header>
