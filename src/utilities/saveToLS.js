@@ -1,5 +1,5 @@
-const getBookList = () => {
-    const bookList = localStorage.getItem('book-list')
+const getBookList = (booklists) => {
+    const bookList = localStorage.getItem(booklists)
    
     if(bookList){
         return JSON.parse(bookList)
@@ -9,9 +9,9 @@ const getBookList = () => {
     }
 }
 
-const saveBookToLS = (id) => {
+const saveBookToLS = (id,booklists) => {
 
-    const bookList = getBookList()
+    const bookList = getBookList(booklists)
     console.log(bookList)
     if(bookList.includes(id)){
         alert('already exist')
@@ -19,10 +19,12 @@ const saveBookToLS = (id) => {
     else{
         bookList.push(id)
         const bookListStr = JSON.stringify(bookList)
-        localStorage.setItem('book-list', bookListStr)
+        localStorage.setItem(booklists, bookListStr)
     }
     
    
 }
+
+
 
 export {saveBookToLS, getBookList}

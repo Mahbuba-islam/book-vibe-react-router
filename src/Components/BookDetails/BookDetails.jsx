@@ -14,7 +14,11 @@ const BookDetails = () => {
 
 
    const handleReadMark = (id) => {
-     saveBookToLS(id)
+     saveBookToLS(id,'book-list')
+   }
+
+   const handleWishList = (id) => {
+    saveBookToLS(id, 'wish-list')
    }
 
     return (
@@ -68,7 +72,7 @@ const BookDetails = () => {
         
          <div className="flex card-actions justify-end space-x-4 mt-6">
       <button onClick={() => handleReadMark(id)} className="w-[160px] rounded-full btn border border-gray-400 px-5 py-1 font-bold">Mark as Read</button>
-      <button className="btn bg-[#50B1C9]  py-1 text-white font-bold w-[165px] rounded-full">Add to WishList</button>
+      <button onClick={() => handleWishList(id)} className="btn bg-[#50B1C9]  py-1 text-white font-bold w-[165px] rounded-full">Add to WishList</button>
     </div>
      </div>
    

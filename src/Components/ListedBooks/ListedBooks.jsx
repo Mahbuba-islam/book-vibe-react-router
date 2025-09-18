@@ -8,13 +8,26 @@ import MarkReadList from '../markReadList/markReadList';
 const ListedBooks = () => {
     const allBooks = useLoaderData()
     const [bookList, setBookList] = useState([])
+    const [wishList, setWishList] = useState([])
     useEffect(()=> {
-        const bookList = getBookList()
+        const bookList = getBookList('book-list')
         const bookListIds = bookList.map(id => parseInt(id))
         const markRead = allBooks.filter(book => bookListIds.includes(book.bookId))
         console.log(markRead)
         setBookList(markRead)
     },[])
+
+
+     useEffect(()=> {
+        const wishList = getBookList('wish-list')
+        const wishListIds = bookList.map(id => parseInt(id))
+        const wishReadList = wishList.filter(book => wishListIds.includes(book.bookId))
+        console.log(wishReadList)
+        setWishList(wishReadList)
+    },[])
+
+   
+
     return (
         <div>
             <Tabs>
@@ -32,7 +45,12 @@ const ListedBooks = () => {
       </div>
     </TabPanel>
     <TabPanel>
-      <h2>Any content 2</h2>
+      <h2 className='font-bold text-2xl'>Wish list Books</h2>
+      <div>
+        {
+            wishList.map(book => <MarkReadList key={book.bookId} book={book}></MarkReadList>)
+        }
+      </div>
     </TabPanel>
   </Tabs>
         </div>
