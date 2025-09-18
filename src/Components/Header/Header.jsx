@@ -48,7 +48,7 @@ const Header = () => {
         {/* Center: Nav Links (desktop only) */}
         <nav className="hidden lg:flex gap-6 text-sm font-medium">
          <NavLink to='/' className="hover:text-primary">Home</NavLink>
-          <NavLink to='' className="hover:text-primary">Listed Books</NavLink>
+          <NavLink to='listedBooks' className="hover:text-primary">Listed Books</NavLink>
           <NavLink to='/' className="hover:text-primary">Pages to Read</NavLink>
         </nav>
 
@@ -67,7 +67,7 @@ const Header = () => {
       {isOpen && (
         <ul className="lg:hidden menu menu-sm px-4 py-2 space-y-2 text-sm font-medium bg-base-100 flex flex-col">
            <NavLink to='/' className="hover:text-primary">Home</NavLink>
-          <NavLink to='' className="hover:text-primary">Listed Books</NavLink>
+          <NavLink to='listedBooks' className="hover:text-primary">Listed Books</NavLink>
           <NavLink to='/' className="hover:text-primary">Pages to Read</NavLink>
         
         </ul>

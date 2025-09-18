@@ -25,4 +25,4 @@ const saveBookToLS = (id) => {
    
 }
 
-export {saveBookToLS}
+export {saveBookToLS, getBookList}
