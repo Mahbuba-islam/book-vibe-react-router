@@ -20,8 +20,8 @@ const ListedBooks = () => {
 
      useEffect(()=> {
         const wishList = getBookList('wish-list')
-        const wishListIds = bookList.map(id => parseInt(id))
-        const wishReadList = wishList.filter(book => wishListIds.includes(book.bookId))
+        const wishListIds = wishList.map(id => parseInt(id))
+        const wishReadList = allBooks.filter(book => wishListIds.includes(book.bookId))
         console.log(wishReadList)
         setWishList(wishReadList)
     },[])
