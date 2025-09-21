@@ -23,10 +23,10 @@ const BookDetails = () => {
 
     return (
         <div>
-            <div className="card lg:card-side w-[1170px] h-[650px] flex flex-col md:flex-row
+            <div className="card lg:card-side w-[1100px] h-[650px] flex flex-col md:flex-row
             my-18">
-  <figure className="bg-amber-100 h-full  rounded-lg flex-1 content-center">
-    <img className="h-[500px] m-auto my-10 md:my-0"
+  <figure className="bg-amber-100 rounded-lg flex-1  p-4 content-center">
+    <img className=" content-center m-auto w-1/2"
       src={image}
       alt="Album" />
   </figure>
@@ -36,7 +36,7 @@ const BookDetails = () => {
     <hr className="border border-gray-400"/>
     <p>{category}</p>
     <hr className="border border-gray-400"/>
-    <p className="text-gray-500"> <span className="text-black font-bold">review:</span> {review}</p>
+    <p className="text-gray-500 max-w-3xl"> <span className="text-black font-bold">review:</span> {review}</p>
     {/* tags */}
     <div className="flex gap-3 items-center">
      <span className="font-bold">Tag</span>

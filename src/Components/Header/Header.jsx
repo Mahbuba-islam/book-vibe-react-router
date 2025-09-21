@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="bg-base-100 mt-4">
       {/* Unified Header Row */}
-      <div className="flex items-center justify-between px-4 py-2 lg:px-8">
+      <div className="flex items-center justify-between px-4 py-2 lg:px-8 flex-col md:flex-row gap-2">
         {/* Left: Hamburger (mobile only) */}
         <div className="lg:hidden">
           <button

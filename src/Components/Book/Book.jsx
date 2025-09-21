@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 
 const Book = ({book}) => {
-    const {bookId,bookName, image, author, review,category, publisher, 
-          totalPages, yearOfPublishing,rating, tags} 
+    const {bookId,bookName, image, author, category, 
+          rating, tags} 
          = book
     return (
     <Link to={`books/${bookId}`}>
-    <div class="card bg-base-100 w-90 shadow-sm border border-gray-300 p-8 rounded-lg h-[500px]">
-  <figure className="bg-gray-200 w-[300px] h-[230px] py-8 rounded-lg">
+    <div class="card bg-base-100 md:w-90  shadow-sm border border-gray-300 p-8 rounded-lg h-[500px]">
+  <figure className="bg-gray-200 md:w-[300px] h-[230px] py-8 rounded-lg">
     <img className="w-[120px] h-[166px] mx-auto "
       src={image}
       alt="Shoes" />
