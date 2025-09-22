@@ -7,7 +7,7 @@ const Book = ({book}) => {
          = book
     return (
     <Link to={`books/${bookId}`}>
-    <div class="card bg-base-100 md:w-90  shadow-sm border border-gray-300 p-8 rounded-lg h-[500px]">
+    <div class="card bg-base-100 md:w-90  shadow-sm border border-gray-300 p-8 rounded-lg h-[500px] ">
   <figure className="bg-gray-200 md:w-[300px] h-[230px] py-8 rounded-lg">
     <img className="w-[120px] h-[166px] mx-auto "
       src={image}
